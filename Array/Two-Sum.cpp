@@ -1,5 +1,6 @@
 //LEETCODE PROBLEM TWO SUM - 
 // LINK : https://leetcode.com/problems/two-sum/
+// submission detail : https://leetcode.com/submissions/detail/1517956270/
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {

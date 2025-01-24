@@ -1,6 +1,6 @@
 //LEETCODE PROBLEM  Plus One
-// LINK : https://leetcode.com/problems/two-sum/
-// submission detail : https://leetcode.com/problems/plus-one/description/
+// LINK : https://leetcode.com/problems/plus-one/
+// submission detail : https://leetcode.com/submissions/detail/1519161094/
 
 class Solution {
 public:

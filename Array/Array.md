@@ -5,11 +5,7 @@
 # Problem Number : #1
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
-This code solves the two-sum problem by checking all pairs of numbers in the list.
-1. The outer loop picks the first number (nums[j]), and the inner loop checks all numbers after it (nums[k]).
-2. If the sum of the two numbers equals the target, their indices (j and k) are added to the result list.
-3. The process ensures every pair is checked, and the result is returned.
-It's a brute-force approach to finding the solution.
+The goal is to find two indices j and k in the array nums such that the sum of the elements at these indices equals the target. This problem can be solved using a brute force approach by checking all possible pairs of elements.
 
 # Approach
 <!-- Describe your approach to solving the problem. -->

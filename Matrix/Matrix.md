@@ -87,20 +87,27 @@ The problem requires transposing a given matrix, where the rows of the input mat
 
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
-
+The problem involves summing the elements of the primary and secondary diagonals of a square matrix. If the matrix has an odd size, the middle element gets counted twice (once in both diagonals). To handle this, we subtract the middle element once to avoid double counting.
 
 
 # Approach
 <!-- Describe your approach to solving the problem. -->
+1. Initialize a variable sum to store the diagonal sum.
+2. Iterate over the rows of the matrix:
+    - Add the primary diagonal element (mat[i][i]) to sum.
+    - Add the secondary diagonal element (mat[i][n - i - 1]) to sum.
+3. Check if the size of the matrix (n) is odd:
+    - If yes, subtract the middle element (mat[n/2][n/2]) from sum to avoid double counting
+4. Return the final value of sum.
 
 # Complexity
 **Time complexity:**
 <!-- Add your time complexity here, e.g. $$O(n)$$ -->
-- 
+- O(n), where n is the number of rows (or columns) in the square matrix. This is because we iterate through each row exactly once. 
 
 **Space complexity:**
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
-- 
+- O(1), as no additional space is used apart from a few variables.
 
 ---
 # ALL Solutions of Matrix are completed 

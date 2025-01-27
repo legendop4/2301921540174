@@ -101,20 +101,32 @@ By using two pointers moving at different speeds, we can determine if there is a
 
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
-
+To merge two sorted linked lists into one sorted list, we leverage the fact that the two lists are already sorted. 
+We can use a pointer to iteratively compare the smallest elements from both lists and build the merged list in ascending order.
 
 
 # Approach
 <!-- Describe your approach to solving the problem. -->
-
+1. Use a Dummy Node:
+        - A dummy node (dummy) is created to act as the starting point for the new merged list. This simplifies edge cases like empty lists.
+        - prev is a pointer that keeps track of the tail of the merged list as we build it.
+2. Traverse Both Lists:
+        - Use two pointers, fast (for list1) and slow (for list2), to compare the current nodes of the two lists.
+        - If fast->val is smaller than slow->val, attach fast to the merged list and move the fast pointer forward.
+        - Otherwise, attach slow to the merged list and move the slow pointer forward.
+        - Move the prev pointer forward to the last node in the merged list.
+3. Attach Remaining Nodes:
+        - Once one of the lists is fully traversed, attach the remaining nodes from the other list to the merged list (either fast or slow).
+4. Return the Result:
+        -Return dummy.next, which points to the head of the merged list.
 
 # Complexity
 **Time complexity:**
 <!-- Add your time complexity here, e.g. $$O(n)$$ -->
-- 
+- O(n+m), where n and m are the lengths of list1 and list2, respectively. Each node is visited once.
 **Space complexity:**
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
-- 
+- O(1), as the merging is done in-place without requiring extra memory.
 
 ---
 # ALL Solutions of Linked List  are completed 

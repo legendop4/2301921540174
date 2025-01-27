@@ -65,20 +65,31 @@ The problem requires transposing a given matrix, where the rows of the input mat
 
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
-
+The problem is to traverse a 2D matrix in a diagonal order. Each diagonal in the matrix consists of elements (i, j) such that i + j is constant. 
+The direction of traversal alternates for each diagonal:
+      - For even diagonals (0, 2, 4, ...), traverse from top-right to bottom-left.
+      - For odd diagonals (1, 3, 5, ...), traverse from bottom-left to top-right.
 
 
 # Approach
 <!-- Describe your approach to solving the problem. -->
-
+1. Diagonal Iteration: Iterate over all possible values of i + j (from 0 to m + n - 2), which corresponds to the sum of row and column indices.
+2. Traverse Each Diagonal:
+      - For each diagonal, calculate the possible coordinates (x, k):
+              -  x is the row index (j).
+              - k is the column index (i - x).
+      - Swap (x, k) if the diagonal index (i) is even, so the traversal alternates between top-right to bottom-left and bottom-left to top-right.
+3. Boundary Check: Ensure that x and k are within the matrix bounds. Skip invalid indices.
+4. Store Results: Append the valid matrix elements mat[x][k] to the result list.
+5. Return Result: Once all diagonals are processed, return the resulting vector.
    
 # Complexity
 **Time complexity:**
 <!-- Add your time complexity here, e.g. $$O(n)$$ -->
-- 
+- O(n×m), where n is the number of rows and m is the number of columns. Each element of the matrix is visited exactly once.
 **Space complexity:**
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
-- 
+- O(1) (excluding the result vector), as no additional space proportional to the input size is used.
 
 ---
 

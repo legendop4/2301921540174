@@ -1,7 +1,7 @@
 # README FOR ALL Linked List  SOLUTION AND APPROACHES 
 ---
 
-# emove Duplicates From Sorted Linked List 
+# Remove Duplicates From Sorted Linked List 
 # Problem Number : #83
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->

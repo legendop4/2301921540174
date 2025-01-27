@@ -6,3 +6,7 @@
 
 # String Readme is uploaded : 
   - [dsatraining/String/String.md](https://github.com/legendop4/dsatraining/blob/8164f8527b5fe0b1e93a9331c19dc7b7bb9854a2/String/String.md)
+
+# Matrix Readme is uploaded : 
+  - [dsatraining/Matrix/Matrix.md](https://github.com/legendop4/dsatraining/blob/c1ca550934297ddb41f1c867a146793c10d913bb/Matrix/Matrix.md)
+

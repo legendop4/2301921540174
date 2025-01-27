@@ -63,29 +63,41 @@ Instead of moving from one node to the next, we "flip" the connections so that e
 - O(1), as the algorithm uses only a constant amount of extra space.
 ---
 
-# Merge Two Sorted Linked List 
-# Problem Number : #21
+# Linked List Cycle 
+# Problem Number : #141
 
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
-
+The problem is to detect whether a cycle exists in a linked list. 
+This can be efficiently solved using the Floyd's Tortoise and Hare algorithm.
+By using two pointers moving at different speeds, we can determine if there is a cycle because the two pointers will eventually meet if a cycle exists.
 
 
 # Approach
 <!-- Describe your approach to solving the problem. -->
-
+1. Initialize Two Pointers:
+        - slow: Moves one step at a time.
+        - fast: Moves two steps at a time.
+        - Both pointers start at the head of the list.
+2. Traverse the List:
+        - While the fast pointer and its next node are not NULL:
+                - Move slow one step forward (slow = slow->next).
+                - Move fast two steps forward (fast = fast->next->next).
+                - If at any point slow equals fast, a cycle is detected, and the function returns true.
+3. No Cycle:
+        -If the fast pointer reaches the end of the list (NULL), the function returns false, indicating there is no cycle.
 
 # Complexity
 **Time complexity:**
 <!-- Add your time complexity here, e.g. $$O(n)$$ -->
-- 
+- O(n), where n is the number of nodes in the list. In the worst case, the fast pointer traverses the list at twice the speed of slow, so they meet in linear time.
 **Space complexity:**
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
-- 
+- O(1), as no additional space is used besides the two pointers.
 ---
 
-# Linked List Cycle
-# Problem Number : #141 
+#  Merge Two Sorted Linked list 
+# Problem Number : #21
 
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->

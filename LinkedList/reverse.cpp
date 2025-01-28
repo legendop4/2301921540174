@@ -1,6 +1,6 @@
 //LEETCODE PROBLEM  Reverse Linked List 
 // LINK : https://leetcode.com/problems/reverse-linked-list/
-// submission detail : 
+// submission detail : https://leetcode.com/submissions/detail/1523038789/
 
 
 

@@ -1,6 +1,6 @@
 //LEETCODE PROBLEM  Linked List Cycle 
 // LINK : https://leetcode.com/problems/linked-list-cycle/
-// submission detail : 
+// submission detail : https://leetcode.com/submissions/detail/1523638520/
 
 
 /**

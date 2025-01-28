@@ -1,6 +1,6 @@
 //LEETCODE PROBLEM  Remove Duplicates From Sorted Linked List 
 // LINK : https://leetcode.com/problems/remove-duplicates-from-sorted-list/
-// submission detail : 
+// submission detail : http://leetcode.com/submissions/detail/1523047533/
 
 /**
  * Definition for singly-linked list.

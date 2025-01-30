@@ -13,3 +13,8 @@
 # Linked List Readme is uploaded : 
   - [dsatraining/LinkedList/LinkedList.md](https://github.com/legendop4/dsatraining/blob/6f9b8c3fd2d11b059d24806ae001546b80c54550/LinkedList/LinkedList.md)
 
+# Stack Readme is uploaded : 
+  - [dsatraining/Stack/Stack.md](https://github.com/legendop4/dsatraining/blob/84a87fa40055c7d137afcfb03c9277311cff0537/Stack/Stack.md)
+
+
+

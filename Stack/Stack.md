@@ -66,20 +66,31 @@ To mimic stack behavior using a queue, we ensure that the most recently added el
 
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
+We need to determine the next greater element for each number in nums1 based on its position in nums2. 
+The next greater element is the first number appearing after the given number in nums2 that is greater than it.
+If no such number exists, we return -1.
+
 
 
 # Approach
 <!-- Describe your approach to solving the problem. -->
-
+1. Find the Index in nums2
+        - For each element in nums1, we locate its position in nums2 using std::find().
+2. Search for the Next Greater Element
+        - Starting from the found index, we iterate through the rest of nums2 to find the next greater element.
+        - If we find an element larger than the current one, we store it and break out of the loop.
+        - If no greater element is found, we return -1 for that number.
+3. Store Results
+        - Each result is appended to an output list, which is returned at the end.
    
 # Complexity
 **Time complexity:**
 <!-- Add your time complexity here, e.g. $$O(n)$$ -->
-- 
+- O(N×M), where N is the size of nums1 and M is the size of nums2.
 
 **Space complexity:**
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
-- 
+- O(1) (excluding the output list), as we do not use extra data structures.
 
 ---
 
@@ -88,21 +99,29 @@ To mimic stack behavior using a queue, we ensure that the most recently added el
 
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
-
+The problem requires us to find an index where the sum of elements to the left equals the sum of elements to the right.
+A naive approach would involve calculating the sum for each index separately, leading to an inefficient solution. Instead, we can optimize this by maintaining a running left sum (ls) and a right sum (rs), reducing the need for redundant computations.
 
 
 # Approach
 <!-- Describe your approach to solving the problem. -->
-
+1. Compute the total sum of the array (rs).
+2. Initialize ls (left sum) as 0.
+3. Iterate through the array:
+        - Subtract the current element from rs (since it's no longer part of the right sum).
+        - Check if ls == rs. If true, return the current index.
+        - Add the current element to ls (updating the left sum for the next iteration).
+4. If no such index is found, return -1.
    
 # Complexity
 **Time complexity:**
 <!-- Add your time complexity here, e.g. $$O(n)$$ -->
--
+- O(n), where n is the size of the array, as we traverse it twice (once for computing the total sum and once for finding the middle index).
 
 **Space complexity:**
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
-- 
+- O(1), since we use only a few integer variables.
+
 ---
 # ALL Solutions of Stack are completed 
 

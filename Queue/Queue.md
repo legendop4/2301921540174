@@ -76,7 +76,7 @@ We need to ensure that elements are dequeued in the correct order.
 
 ---
 
-# 
+# Sliding Window Maximum
 # Problem Number : #
 
 # Intuition
@@ -96,23 +96,29 @@ We need to ensure that elements are dequeued in the correct order.
 
 ---
 
-# 
-# Problem Number : #1991
+# Find The Winner of Circular Game
+# Problem Number : #1823
 
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
-
+The problem is a variation of the Josephus Problem, where n friends stand in a circle, and every k-th friend is eliminated until only one remains. 
+The solution relies on recursion to determine the position of the winner.
 # Approach
 <!-- Describe your approach to solving the problem. -->
-
+1. Define a recursive function jos(n, k) to solve the Josephus problem for n people with step k.
+2. Base case: If only one person remains (n == 1), return 0 (zero-based index).
+3. Recursive case: The survivor's position in a smaller problem (n-1 people) is computed recursively and then adjusted using modular arithmetic:
+                jos (n−1 ,k) + k mod n
+This shifts the index after eliminating a person.
+4. Convert the zero-based index returned by jos(n, k) to a one-based index in findTheWinner(n, k) by adding 1.
    
 # Complexity
 **Time complexity:**
 <!-- Add your time complexity here, e.g. $$O(n)$$ -->
-- 
+- O(n), as the recursion runs for n levels
 **Space complexity:**
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
-- 
+- O(n) due to recursive function calls on the stack.
 
 ---
 # ALL Solutions of Queue are completed 

@@ -16,5 +16,7 @@
 # Stack Readme is uploaded : 
   - [dsatraining/Stack/Stack.md](https://github.com/legendop4/dsatraining/blob/84a87fa40055c7d137afcfb03c9277311cff0537/Stack/Stack.md)
 
+# Queue Readme is uploaded : 
+  - [dsatraining/Queue/Queue.md](https://github.com/legendop4/dsatraining/blob/95f23769821d81249c429135cd1ad5a7f985e5df/Queue/Queue.md)
 
 

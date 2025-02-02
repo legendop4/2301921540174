@@ -1,6 +1,6 @@
 //LEETCODE PROBLEM  SLiding Window Maximum
 // LINK : https://leetcode.com/problems/sliding-window-maximum/
-// submission detail : 
+// submission detail : https://leetcode.com/submissions/detail/1528548585/
 
 class Solution {
 public:

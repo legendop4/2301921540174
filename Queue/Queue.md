@@ -77,22 +77,35 @@ We need to ensure that elements are dequeued in the correct order.
 ---
 
 # Sliding Window Maximum
-# Problem Number : #
+# Problem Number : #239
 
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
+The problem requires us to find the maximum element in every sliding window of size k as we traverse the array. 
+A brute force approach would check all elements in each window, but this would be inefficient. 
+Instead, we use a monotonic deque to keep track of useful elements efficiently.
 
 # Approach
 <!-- Describe your approach to solving the problem. -->
-
+1. Use a deque (q) to store indices of useful elements in decreasing order of their values. This ensures that the maximum element of the current window is always at the front of the deque.
+2. Initialize the deque for the first k elements:
+        - Remove elements from the back of q if they are smaller than the current element nums[i].
+        - Push the current index at the back.
+3. Store the first maximum element, which is at nums[q.front()].
+4. Slide the window across the array:
+        - Remove elements out of the window: If q.front() is out of the current window (i - q.front() >= k), remove it.
+        - Maintain the decreasing order: Remove elements from the back if they are smaller than nums[i].
+        - Insert the new element: Push the current index i at the back of the deque.
+        - Store the new maximum: nums[q.front()] is the maximum for this window.
+   
 # Complexity
 **Time complexity:**
 <!-- Add your time complexity here, e.g. $$O(n)$$ -->
-- 
+- O(n), since each element is pushed and popped from the deque at most once.
 
 **Space complexity:**
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
-- 
+- O(k), as the deque stores at most k elements.
 
 ---
 

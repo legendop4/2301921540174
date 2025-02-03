@@ -1,6 +1,6 @@
-//LEETCODE PROBLEM  MAx Depth of Binary Tree
+//LEETCODE PROBLEM  Max Depth of Binary Tree
 // LINK : https://leetcode.com/problems/maximum-depth-of-binary-tree/
-// submission detail : https://leetcode.com/submissions/detail/1519164270/
+// submission detail : https://leetcode.com/submissions/detail/1529647747/
 
 
 /**

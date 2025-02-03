@@ -19,4 +19,7 @@
 # Queue Readme is uploaded : 
   - [dsatraining/Queue/Queue.md](https://github.com/legendop4/dsatraining/blob/95f23769821d81249c429135cd1ad5a7f985e5df/Queue/Queue.md)
 
+# Tree Readme is uploaded : 
+  - [dsatraining/Tree/Tree.md](https://github.com/legendop4/dsatraining/blob/446ac22dc326c7c169bdede2cef7648e3df5e67b/Tree/Tree.md)
+
 

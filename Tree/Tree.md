@@ -59,21 +59,33 @@ We can solve this problem using recursion by computing the depth of the left and
 
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
-
+The goal is to find the lowest common ancestor (LCA) of two given nodes, p and q, in a binary tree.
+The LCA is the deepest node in the tree that has both p and q as descendants.
+The problem is solved using a recursive depth-first search (DFS) approach.
 
 
 # Approach
 <!-- Describe your approach to solving the problem. -->
-
-   
+1.Base Case:
+        - If root is nullptr, return nullptr (no LCA found).
+        - If root is either p or q, return root, as one of the nodes is found.
+2. Recursive Search:
+        - Recursively search for p and q in the left and right subtrees.
+        - Store the results in left and right.
+3. LCA Determination:
+        - If both left and right are non-null, it means p and q are found in different subtrees, making root their LCA.
+        - If only one of them is non-null, return the non-null child (it contains p, q, or their LCA).
+        - If neither is found, return nullptr.
+           
 # Complexity
 **Time complexity:**
 <!-- Add your time complexity here, e.g. $$O(n)$$ -->
-- 
+- O(n), where n is the number of nodes in the tree. Each node is visited once.
 
 **Space complexity:**
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
-- 
+- O(h), where h is the height of the tree due to recursive calls. In the worst case (skewed tree), it can be O(n). In a balanced tree, it is O(logn).
+  
 ---
 
 # Path Sum 
@@ -81,20 +93,25 @@ We can solve this problem using recursion by computing the depth of the left and
 
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
-
-
+We are tasked with checking whether a path exists in a binary tree where the sum of the node values along that path equals a given target sum.
+The approach recursively explores each node and reduces the target sum by the value of the current node.
+If we reach a leaf node (a node with no children), we check if the current node's value matches the remaining target sum.
 
 # Approach
 <!-- Describe your approach to solving the problem. -->
+1. Base case check: If the root is nullptr, return false because there's no path in an empty tree.
+2. Leaf node check: If the current node is a leaf (no left or right child), check if its value equals the remaining targetSum. If it does, return true; otherwise, return false.
+3. Recursive exploration: Otherwise, recursively check the left and right subtrees. For each child, subtract the current node's value from the target sum and call hasPathSum recursively for both left and right children.
+4. Return the result of the recursive checks (either true if a valid path is found, or false if no valid path exists).
    
 # Complexity
 **Time complexity:**
 <!-- Add your time complexity here, e.g. $$O(n)$$ -->
-- 
+-  O(n), where n is the number of nodes in the tree. We visit each node once in the worst case.
 
 **Space complexity:**
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
-- 
+- O(h), where h is the height of the tree, due to the recursion stack in the case of a deep tree. In the worst case, this could be O(n) for a skewed tree.
 
 ---
 # ALL Solutions of Tree are completed 

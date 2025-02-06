@@ -48,43 +48,53 @@ The goal is to find the largest element in the given array. We traverse the arra
 
 ---
 
-# 
+# Move All Zeroes To End
 
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
-
+The goal is to move all zeros in the array to the end while maintaining the relative order of non-zero elements.
+This can be efficiently done using a two-pointer approach.
 
 
 # Approach
 <!-- Describe your approach to solving the problem. -->
+1. Use a pointer j to track the position where the next non-zero element should be placed.
+2. Iterate through the array:
+        - If the current element is non-zero, place it at index j and increment j.
+3. After placing all non-zero elements, fill the remaining positions in the array with zeros.
 
 # Complexity
 **Time complexity:**
 <!-- Add your time complexity here, e.g. $$O(n)$$ -->
-- 
+- O(n), where n is the size of the array, as we iterate through the array only once.
 
 **Space complexity:**
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
-- 
+- O(1), since we modify the array in place without using extra space.
 
 ---
 
-# 
+# Find Frequency of Element
 
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
-
+The problem requires counting the occurrences of a given number x in the array. 
+A straightforward way to achieve this is by iterating through the array and maintaining a counter.
 
 # Approach
 <!-- Describe your approach to solving the problem. -->
+1. Initialize a counter ans to 0.
+2. Iterate through the array:
+        - If the current element matches x, increment ans.
+3. Return the final count after the loop completes.
 
 # Complexity
 **Time complexity:**
 <!-- Add your time complexity here, e.g. $$O(n)$$ -->
-- 
+- O(n), where 𝑛 is the size of the array, as we traverse the array once.
 
 **Space complexity:**
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
-- 
+-  𝑂(1) , since we use only a single integer variable for counting.
 ---
 # ALL Solutions of Array are completed 

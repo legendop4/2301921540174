@@ -140,4 +140,47 @@ Reversing a string means changing the order of its characters so that the last c
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
 - O(n), as a new string is created to store the reversed result.
 ---
+#  Non repeating Elements
+
+# Intuition
+<!-- Describe your first thoughts on how to solve this problem. -->
+The problem requires finding the first non-repeating element in a given array. 
+A non-repeating element is one that appears exactly once in the array. 
+To achieve this efficiently, we can use a hash map to count occurrences of each element and then identify the first element with a count of one.
+
+# Approach
+<!-- Describe your approach to solving the problem. -->
+1. Count occurrences: Use an unordered map (mp) to store the frequency of each element in the array.
+2. Identify first unique element: Iterate through the array again and return the first element whose frequency in the map is exactly one.
+3. Return default value: If no unique element is found, return 0.
+
+# Complexity
+**Time complexity:**
+<!-- Add your time complexity here, e.g. $$O(n)$$ -->
+- O(n)
+
+**Space complexity:**
+<!-- Add your space complexity here, e.g. $$O(n)$$ -->
+- The unordered map stores at most O(n) elements in the worst case.
+---
+# Transpose of a Matrix
+
+# Intuition
+<!-- Describe your first thoughts on how to solve this problem. -->
+The transpose of a matrix is obtained by swapping its rows and columns, i.e., the element at position (i, j) moves to position (j, i). This means that the new matrix will have its rows converted into columns.
+
+# Approach
+<!-- Describe your approach to solving the problem. -->
+1. Create a temporary matrix (arr[n][n]): Store the transposed values in a new 2D array by swapping matrix[j][i] into arr[i][j].
+2. Copy the transposed values back: Iterate over the temporary matrix and copy its values back into the original matrix.
+
+# Complexity
+**Time complexity:**
+<!-- Add your time complexity here, e.g. $$O(n)$$ -->
+- Since we traverse half of the matrix (i < j swaps), we still make O(n2) operations.
+
+**Space complexity:**
+<!-- Add your space complexity here, e.g. $$O(n)$$ -->
+- O(1) , No extra space is used; all operations are performed in place.
+---
 # ALL Solutions of All easy revision  are completed 

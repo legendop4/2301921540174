@@ -97,4 +97,47 @@ A straightforward way to achieve this is by iterating through the array and main
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
 -  𝑂(1) , since we use only a single integer variable for counting.
 ---
-# ALL Solutions of Array are completed 
+# Anagram Strings
+
+# Intuition
+<!-- Describe your first thoughts on how to solve this problem. -->
+An anagram is a word formed by rearranging the letters of another. 
+This means both words must have the same character frequencies.
+
+# Approach
+<!-- Describe your approach to solving the problem. -->
+1. Create a frequency array sk of size 26 (assuming lowercase English letters).
+2. Iterate through s, incrementing the corresponding frequency in sk.
+3. Iterate through t, decrementing the corresponding frequency in sk.
+4. If all values in sk are zero, s and t are anagrams; otherwise, they are not.
+
+# Complexity
+**Time complexity:**
+<!-- Add your time complexity here, e.g. $$O(n)$$ -->
+- O(n), where n is the length of the input strings.
+
+**Space complexity:**
+<!-- Add your space complexity here, e.g. $$O(n)$$ -->
+- O(1), since we use a fixed-size array (26 elements).
+---
+# Reverse A string 
+
+# Intuition
+<!-- Describe your first thoughts on how to solve this problem. -->
+Reversing a string means changing the order of its characters so that the last character becomes the first, the second-last becomes the second, and so on.
+
+# Approach
+<!-- Describe your approach to solving the problem. -->
+1. Use s.rbegin() and s.rend() to create a reversed version of the string.
+2. Construct a new string from the reversed iterators.
+
+# Complexity
+**Time complexity:**
+<!-- Add your time complexity here, e.g. $$O(n)$$ -->
+- O(n), where n is the length of the string (since we iterate through all characters once).
+
+**Space complexity:**
+<!-- Add your space complexity here, e.g. $$O(n)$$ -->
+- O(n), as a new string is created to store the reversed result.
+---
+# ALL Solutions of All easy revision  are completed 

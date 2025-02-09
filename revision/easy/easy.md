@@ -183,4 +183,60 @@ The transpose of a matrix is obtained by swapping its rows and columns, i.e., th
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
 - O(1) , No extra space is used; all operations are performed in place.
 ---
+# Search in a Row-Column Sorted matrix
+
+# Intuition
+<!-- Describe your first thoughts on how to solve this problem. -->
+The matrix is sorted both row-wise and column-wise.
+Instead of scanning the entire matrix, we can take advantage of this property to eliminate rows or columns efficiently.
+
+# Approach
+<!-- Describe your approach to solving the problem. -->
+1. Start from the top-right corner (mat[0][m-1]).
+2. Iterate until out of bounds:
+        - If mat[row][col] == x: Return true (found x).
+        - If mat[row][col] > x: Move left (decrement col).
+        - If mat[row][col] < x: Move down (increment row).
+3. If we exit the loop, return false (not found).
+
+# Complexity
+**Time complexity:**
+<!-- Add your time complexity here, e.g. $$O(n)$$ -->
+- O(n+m), since in the worst case, we move left m times and down n times.
+
+**Space complexity:**
+<!-- Add your space complexity here, e.g. $$O(n)$$ -->
+- O(1), since no extra space is used.
+---
+#  Search in a row wise sorted matrix
+
+# Intuition
+<!-- Describe your first thoughts on how to solve this problem. -->
+The given matrix is sorted row-wise and column-wise, so we can use an efficient binary search approach instead of scanning the entire matrix.
+
+This solution takes a row-wise search approach:
+        -Since each row is sorted, we can quickly check if x could be in a given row.
+        - If x lies within the range [mat[i][0], mat[i][m-1]], it might be in row i.
+        - Perform binary search on that row to check if x is present.
+        - If found, return true, otherwise continue checking other rows.
+
+# Approach
+<!-- Describe your approach to solving the problem. -->
+1. Iterate through all rows of the matrix.
+2. For each row:
+        - If x is within the row's range (mat[i][0] ≤ x ≤ mat[i][m-1]):
+                - Perform binary search on that row.
+                - If found, return true.
+3. If no row contains x, return false.
+# Complexity
+**Time complexity:**
+<!-- Add your time complexity here, e.g. $$O(n)$$ -->
+- Binary search per row: O(logm)
+Iterating through rows: O(n)
+Overall Complexity: O(nlogm) (worse than O(n+m) from the stair-step search approach but still efficient).
+
+**Space complexity:**
+<!-- Add your space complexity here, e.g. $$O(n)$$ -->
+- O(1) (no extra space used).
+---
 # ALL Solutions of All easy revision  are completed 
